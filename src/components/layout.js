@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Header from './headernavbar/header';
 import Navbar from './headernavbar/navbar';
+import Microphone  from './reactMic/reactMic';
 
 
 class Layout extends Component {
@@ -12,6 +13,7 @@ class Layout extends Component {
         {this.props.children}
         <Header />
         <Navbar />
+        <Microphone />
         
       </div>
     );

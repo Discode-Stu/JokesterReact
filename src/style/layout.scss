@@ -3,6 +3,6 @@
 .layout {
     display: grid;
 
-    grid-template-rows: [header-s] 150px [header-e nav-s] 50px [nav-e content-s] 1fr [content-e];
+    grid-template-rows: [header-s] 150px [header-e nav-s] 50px [nav-e content-s] 1fr [content-e] 1fr 1fr;
     grid-template-columns: [s] 1fr [e]
 }
