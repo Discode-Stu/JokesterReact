@@ -22,3 +22,6 @@ class Layout extends Component {
 
 
 export default Layout;
+
+//NOTES
+// card mode or list mode for jokes

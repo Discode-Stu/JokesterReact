@@ -3,14 +3,33 @@
 .header {
     
     display: grid;
-    justify-content: center;
+    grid-template-columns: [s] 150px [m] 1fr [e];
+
 
     height: 150px;
     background-color: $peach;
 
     &__image {
+        grid-column: s/m;
         height: 150px;
+        justify-content: start;
+        transform: translateX(50px);;
         
+    }
+
+    &__title-jokester {
+        grid-column: m/e;
+        font-size: 60px;
+        font-family: 'Rock Salt', cursive;
+        transform: translateX(7px);
+        
+        
+    }
+    &__title-desription {
+        font-size: 18px;
+        transform: translateY(-18px) translateX(18px);
+         
+        font-family: 'Raleway', sans-serif;
     }
 }
 
