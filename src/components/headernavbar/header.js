@@ -7,7 +7,7 @@ class Header extends Component {
         return(
             
                 <div className='header'>
-                    <img className='header__image' src={ require('./../../../src/images/jesterGirl.png') } />
+                    <img className='header__image-jester' src={ require('./../../../src/images/jesterGirl.png') } />
                     <div className='header__title'>
                         <div className='header__title-jokester'>
                             Jokester
@@ -16,6 +16,8 @@ class Header extends Component {
                             Learn and Practice Jokes!
                         </div>
                     </div>
+                    {/* <img className='header__image-audience' src={ require('./../../../src/images/silhouette-audience.png') } /> */}
+
                 </div>
  
          

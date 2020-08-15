@@ -1,5 +1,6 @@
 
 .react-mic-container {
+    z-index: -1;
     display: grid;
     grid-template-columns: [s] 1fr [e];
     grid-template-rows: [s] 1fr [ms] 1fr [me] 1fr [e];

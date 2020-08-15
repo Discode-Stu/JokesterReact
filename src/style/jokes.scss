@@ -1,0 +1,9 @@
+.jokes {
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: [s] 1fr [e];
+    grid-template-rows: [s] 40px [e];
+    grid-row: joke-s/joke-e;
+    grid-column: s/e;
+    
+}

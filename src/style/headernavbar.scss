@@ -3,27 +3,29 @@
 .header {
     
     display: grid;
-    grid-template-columns: [s] 150px [m] 1fr [e];
-
+    grid-template-columns: [s] 150px [m] 1fr [e] 1fr [f];
 
     height: 150px;
     background-color: $peach;
 
-    &__image {
+    &__image-jester {
         grid-column: s/m;
         height: 150px;
         justify-content: start;
-        transform: translateX(50px);;
-        
+        transform: translateX(50px);
     }
-
+    &__image-audience {
+        grid-column: e/f;
+        height: 150px;
+       
+    }
+        
     &__title-jokester {
         grid-column: m/e;
         font-size: 60px;
         font-family: 'Rock Salt', cursive;
         transform: translateX(7px);
-        
-        
+          
     }
     &__title-desription {
         font-size: 18px;
