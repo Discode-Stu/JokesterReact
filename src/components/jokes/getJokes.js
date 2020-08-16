@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import Joke from './joke'
-
-
 class GetJokes extends Component {
     constructor() {
         super();
@@ -11,7 +8,6 @@ class GetJokes extends Component {
         this.state = {
             data: []
         };
-        // this.getJokes = this.getJokes.bind(this);
       }
 
       componentDidMount() {
@@ -28,21 +24,15 @@ class GetJokes extends Component {
         });
       }
 
-    //   jokes() {
-    //     return this.state.data.map(item => {
-    //       return <Joke title={item.name} url={item.url} slug={item.id} />;
-    //     });
-    //   }
-
-
     render() {
+        
         const { data } = this.state
         const dataList = data.length ? (
-            data.map(dat => {
+            data.map(joke => {
                 return (
-                    <div key={dat.id}>
-                        <div>{dat.title}</div>
-                        <div>{dat.content}</div>
+                    <div key={joke.title}>
+                        <div>{joke.title}</div>
+                        <div>{joke.content}</div>
 
                     </div>
                 )
