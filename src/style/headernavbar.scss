@@ -33,6 +33,13 @@
          
         font-family: 'Raleway', sans-serif;
     }
+    &__disc {
+        justify-self: end;
+        align-self: center;
+        grid-column: e/f;
+        font-size: 125px;
+        transform: translateX(-48px);
+    }
 }
 
 .navbar {

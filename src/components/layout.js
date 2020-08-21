@@ -16,11 +16,11 @@ class Layout extends Component {
       
         <Header />
         <Navbar />
-        <div>
-        <Microphone />
+        <div className='layout__mic'>
+          <Microphone />
         </div>
-        <div>
-        <GetJokes />
+        <div className='layout__jokes'>
+          <GetJokes className='layout__jokes__abc__card' />
         </div>
        
     

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 class GetJokes extends Component {
     constructor() {
         super();
@@ -28,25 +30,43 @@ class GetJokes extends Component {
         
         const { data } = this.state
         const dataList = data.length ? (
-            data.map(joke => {
+            data.map((joke) => {
                 return (
-                    <div key={joke.title}>
-                        <div>{joke.title}</div>
-                        <div>{joke.content}</div>
-
+                    //TODO joke.id
+                    <div key={joke.id} className='cards'>
+                        <div className='cards__front'>
+                            <div className='cards__front__title'>
+                            {joke.title}
+                            </div>
+                            <div>
+                                <img className='cards__front__jester' src={ require('./../../../src/images/jesterGirl.png') } />
+                                <div className='cards__front__jokester'>Jokester</div>
+                            </div>
+                        </div>
+                        <div className='cards__back'>
+                            <div className='cards__back__content' >
+                                {joke.content}
+                            </div>
+                            <img className='cards__back__content__jester' src={ require('./../../../src/images/jesterGirl.png') } />
+                        </div>
                     </div>
                 )
-
             })
         ) : (
-            <div className="center">No Jokes Yet</div>
-        )
-        
-        return (
-            <div className='jokes'>
-                {dataList}
+            <div className='loading'>
+                <div className="loading__message">Jokes Loading...</div>
+                <FontAwesomeIcon className='loading__disc' icon="compact-disc" spin />
             </div>
-        );
+        )
+
+        return (
+            <div className='layout__jokes__abc'>
+                 {dataList}
+            </div>
+           
+        )
+         
+        
     }
 }
 

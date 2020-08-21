@@ -1,9 +1,155 @@
-.jokes {
-    font-size: 20px;
+@import 'variables';
+
+.layout__jokes__abc {
     display: grid;
-    grid-template-columns: [s] 1fr [e];
-    grid-template-rows: [s] 40px [e];
-    grid-row: joke-s/joke-e;
-    grid-column: s/e;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+
+    .cards{
+        display: grid;
+        grid-template-rows: [s] 1fr  [m] 1fr [e];
+
+        &__front {
+            font-size: 16px;
+            text-decoration: underline;
+            color: $purple;
+            background-color: $peach;
+
+            display: grid;
+            //grid-template-columns: [s] 1fr [e];
+            //grid-template-rows: [s] 1fr [m] 1fr [e];
+            //grid-row: s/m;
+            //grid-column: s/e;
+            font-family: 'Raleway', sans-serif;
+
+            height: 260px;
+            width: 240px;
+            padding: 5px;
+            
+            border: 5px solid $yellow;
+            box-shadow: 0 2px 20px 0 rgba(0,0,0,0.1);
+            align-items: center;
+            justify-items: center;
+
+            &__title {
+                font-size: 20px;
+            }
+
+
+
+            &__jester {
+                // display: grid;
+                height: 125px;
+                grid-row:  m/e;
+                justify-self: center;
+            }
+            &__jokester {
+                font-family: 'Rock Salt', cursive;
+            }
+        }
+        
+        &__back {
+
+            // backface-visibility: hidden;
+            // transform: rotateY(180deg);
+            // transition: all .3s ease;
+            // &:hover {
+            //     transform: rotateY(0deg);
+            // }
+            font-size: 16px;
+            color: $purple;
+            background-color: $peach;
+
+            //display: grid;
+        // grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            //grid-template-columns: [s] 1fr [e];
+            //grid-template-rows: [s] 1fr [m] 1fr [e];
+            //grid-row: m/e;
+            //grid-column: s/e;
+            font-family: 'Raleway', sans-serif;
+
+            height: 260px;
+            width: 240px;
+            padding: 5px;
+            
+            border: 5px solid $yellow;
+            box-shadow: 0 2px 20px 0 rgba(0,0,0,0.1);
+            align-items: center;
+
+            &__content__jester {
+                // display: grid;
+                height: 125px;
+                grid-row:  m/e;
+                justify-self: center;
+            }
+        }
+
+    }
+
+}
+.loading {
+    display: grid;
+    grid-template-rows: [s] 1fr [e];
+    grid-template-columns: [s] 1fr [m1] 300px [m2] 1fr [e];
+
+    .loading__message {
+        font-size: 30px;
+        color: $purple;
+        grid-row: s/e;
+        grid-column: m1/m2;
+
+        font-family: 'Rock Salt', cursive;
+
+    }
+
+    .loading__disc {
+        display: grid;
+        font-size: 45px;
+        grid-row: s/e;
+        grid-column: m2/e;
+        align-self: center;
+    }
+}
+
+.jokes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-rows: s/e;
+    
+
+}
+
+.cards {
+    display: grid;
+    grid-template-rows: 1/-1;
+    grid-template-columns: 1/-1;
+
+    & > * {
+        grid-row: 1/-1;
+        grid-column: 1/-1;
+
+    }
+}
+
+.cards {
+        perspective: 150rem;
+        -moz-perspective: 150rem;
+
+        &__front, 
+        &__back {
+            backface-visibility: hidden;
+            transition: all .3s ease;
+        }
+        &__back {
+            transform: rotateY(-180deg);
+        }
+
+        &:hover &__front {
+            transform: rotateY(180deg);
+        }
+    
+
+        &:hover &__back {
+            transform: rotateY(0deg);
+        }
     
 }

@@ -5,10 +5,17 @@ import { createStore, applyMiddleware } from "redux";
 import { BrowserRouter } from "react-router-dom";
 import Layout from "./components/layout";
 import reducers from "./reducers";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCompactDisc
+} from "@fortawesome/free-solid-svg-icons";
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 import "./style/main.scss";
+
+library.add(faCompactDisc)
 
 function main() {
   ReactDOM.render(

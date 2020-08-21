@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 
 class Header extends Component {
@@ -15,9 +17,11 @@ class Header extends Component {
                         <div className='header__title-desription'>
                             Learn and Practice Jokes!
                         </div>
-                    </div>
-                    {/* <img className='header__image-audience' src={ require('./../../../src/images/silhouette-audience.png') } /> */}
 
+                    </div>
+                    <div className className='header__disc'>
+                        <FontAwesomeIcon className='header__disc__icon' icon="compact-disc" />
+                    </div>
                 </div>
  
          
