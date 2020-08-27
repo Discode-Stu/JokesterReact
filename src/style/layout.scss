@@ -3,25 +3,8 @@
 .layout {
     display: grid;
 
-    grid-template-rows: [header-s] 150px [header-e nav-s] 50px [nav-e mic-s] 420px [mic-e cards-s] 1fr [cards-e];
+    grid-template-rows: [header-s] 150px [header-e nav-s] 51px [nav-e mic-s] 454px [mic-e cards-s] 1fr [cards-e];
     grid-template-columns: [s] 1fr [e];
 
-    // &__jokes{ 
-    //     display: grid;
-    //     grid-row: cards-s/cards-e;
-    //     grid-column: s/e;
-    //     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-        //grid-template-columns: 1fr 1fr;
-        //grid-template-rows: 1fr;
-        //height: 260px;
-        
-        // .cards {
-        //     display: grid;
-        //     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            
 
-            
-        // }
-
-    // }
 }

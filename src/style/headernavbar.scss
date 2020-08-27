@@ -1,48 +1,35 @@
 @import 'variables';
 
 .header {
-    
-    display: grid;
-    grid-template-columns: [s] 150px [m] 1fr [e] 1fr [f];
+    display: flex;
+    //grid-template-columns: [s] 1fr [m] 1fr [e] 1fr [f];
 
-    height: 150px;
+    height: 147px;
     background-color: $peach;
+    border-bottom: 5px groove $peach;
+
+    justify-content: center;
 
     &__image-jester {
-        grid-column: s/m;
         height: 150px;
-        justify-content: start;
-        transform: translateX(50px);
     }
-    &__image-audience {
-        grid-column: e/f;
-        height: 150px;
-       
-    }
-        
+ 
     &__title-jokester {
-        grid-column: m/e;
         font-size: 60px;
         font-family: 'Rock Salt', cursive;
-        transform: translateX(7px);
-          
+        transform: translateX(7px);   
     }
+
     &__title-desription {
         font-size: 18px;
-        transform: translateY(-18px) translateX(18px);
-         
         font-family: 'Raleway', sans-serif;
-    }
-    &__disc {
-        justify-self: end;
-        align-self: center;
-        grid-column: e/f;
-        font-size: 125px;
-        transform: translateX(-48px);
+
+        transform: translateY(-20px) translateX(18px);
     }
 }
 
 .navbar {
     background-color: $purple;
-    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+
+    border-bottom: 5px groove $purple;
 }

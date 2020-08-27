@@ -54,7 +54,7 @@ class GetJokes extends Component {
             })
         ) : (
             <div className='loading'>
-                <div className="loading__message">Jokes Loading...</div>
+                <div className="loading__message">Loading...</div>
                 <FontAwesomeIcon className='loading__disc' icon="compact-disc" spin />
             </div>
         )

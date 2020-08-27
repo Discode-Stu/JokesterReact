@@ -2,31 +2,47 @@
 .react-mic-container {
     z-index: -1;
     display: grid;
-    grid-template-columns: [s] 1fr [e];
-    grid-template-rows: [s] 1fr [ms] 1fr [me] 1fr [e];
+    grid-template-columns: [s] 1fr [e] .5fr [f];
+    grid-template-rows: [s] 1fr [ms] 1fr [me] .45fr [e];
     grid-row: s/e;
     grid-column: s/e;
-    
+    justify-items: center;
+
+    background-color: $teal;
+
+    padding-top: 10px;
+
+
     
     &__sound-wave {
-
+        width: 1130px;
         grid-row: s/ms;
-        grid-column: s/e;
-       // z-index: -1;
+
+       border-top: 5px ridge $yellow;
+       border-left: 5px ridge $yellow;
+       border-right: 5px ridge $yellow;
+       border-bottom: 3px solid $yellow;
     }
 
 
     &__buttons {
-        width: 640px;
+        width: 1130px;
         display: grid;
+        //transform: translateY(-2px);
+        grid-column: s/e;
+        //padding: 5px;
 
-        grid-template-columns: [s] 213px [ms] 213px [me] 213px [e];
+        grid-template-columns: [s] 311px [ms] 311px [me] 1fr [e];
         justify-items: stretch;
         align-content: center;
         background-color: $teal;
 
+        border-left: 5px ridge $yellow;
+        border-right: 5px ridge $yellow;
+        border-bottom: 3px solid $yellow;
+
         .fas {
-            font-size: 25px;
+            font-size: 45px;
         }
 
         &__start,
@@ -34,51 +50,97 @@
         &__download {
             grid-column: s/e;
             grid-row: sm/me;
-            // width: 100px;
-            height: 35px;
+            height: 85px;
             color: $purple;
             border-radius: 60px;
+ 
         }
 
+        &__start,
+        &__stop {
+            width: 300px;
+            margin-left: 5px;
+        }
+        &__start,
+        &__stop,
+        &__download__icon {
+
+            border: 3px outset $yellow;
+            background-color: $peach;
+            
+
+            &:hover {
+                background-color: $tan;
+            }
+
+            &:active {
+                //transform: scale(.95);
+                border: 3px inset $yellow;
+                background-color: $teal;
+
+            }
+
+            &:focus {
+                outline: none;  
+            }
+        }
+        
         &__start {    
             grid-column: s/ms;
 
-            background-color: $peach;
-
-            // .fa-microphone-alt {
-            //     font-size: 25px;
-            // }
-
-            
+            &:focus {
+                background-color: $yellow;
+            } 
         }
 
         &__stop {
             grid-column: ms/me;
-            background-color: $peach;
         }
 
         &__download {
-            transform: translateX(140px);;
+            display: grid;
             color: $purple;
             grid-column: me/e;
+            justify-items: end;
+            margin-right: 5px;
+            align-items: center;
+
+            &__icon {
+                border-radius: 60px;
+                color: $purple;
+                height: 85px;
+                width: 85px;
+                font-size: 50px;
+                
+            }
         }
 
     }
+    .icon {
+        transform: translateY(-25px);
+    }
 
     &__audio {
-        width: 640px;
+        width: 1130px;
         grid-column: s/e;
         grid-row: me/e;
-        transform: translateY(-2px);
     
         align-items: center;
         justify-items: center;
-        //color: green;
-        background-color: $purple;
+        background-color: $yellow;
+
+        border-left: 5px ridge $yellow;
+        border-right: 5px ridge $yellow;
+        border-bottom: 5px ridge $yellow;
 
     }
 }
 
+.react-mic-container__buttons__download__icon {
+    font-size: 100px;
+    // transform: translateY(20px);
+
+}
 
 
 // .oscilloscope-scrim {

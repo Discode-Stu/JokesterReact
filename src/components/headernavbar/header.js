@@ -15,12 +15,8 @@ class Header extends Component {
                             Jokester
                         </div>
                         <div className='header__title-desription'>
-                            Learn and Practice Jokes!
+                            Practice Telling Jokes!
                         </div>
-
-                    </div>
-                    <div className className='header__disc'>
-                        <FontAwesomeIcon className='header__disc__icon' icon="compact-disc" />
                     </div>
                 </div>
  
