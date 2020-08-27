@@ -4,5 +4,86 @@
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
     color: $purple;
-    //line-height: 2;
+    
+    line-height: 2;
+
+    width: 70%;
+    height: 300px;
+    grid-row: s/me;
+
+    display: grid;
+    grid-template-rows: [s] 1fr [e];
+    grid-template-columns: [s] 1fr [e];
+
+
+
+    &__front, 
+    &__back {
+        backface-visibility: hidden;
+        transition: all .3s ease;
+        grid-row: s/e;
+        grid-column: s/e;
+        
+    }
+    &__front {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        font-family: 'Rock Salt', cursive;
+        justify-content: center;
+        border: 7px outset $yellow;
+
+        &__welcome {
+            font-size: 40px;
+        }
+        &__jester {
+            height: 150px;
+            justify-self: center;
+        }
+    }
+    &__front {
+        &__smiley {
+            font-size: 50px;
+            color: $purple;
+            background-color: $peach;
+        }
+
+    }
+    &__back {
+        transform: rotateY(-180deg);
+        padding: 4px;
+        border: 7px inset $yellow;
+
+        //grid-row: s/e;
+
+    }
+
+    &:hover &__front {
+    transform: rotateY(180deg);
+    }
+    
+    &:hover &__back {
+    transform: rotateY(0deg);
+    }
+
 }
+
+// perspective: 150rem;
+// -moz-perspective: 150rem;
+
+// &__front, 
+// &__back {
+//     backface-visibility: hidden;
+//     transition: all .3s ease;
+// }
+// &__back {
+//     transform: rotateY(-180deg);
+// }
+
+// &:hover &__front {
+//     transform: rotateY(180deg);
+// }
+
+
+// &:hover &__back {
+//     transform: rotateY(0deg);
+// }

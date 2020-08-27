@@ -1,8 +1,10 @@
 
+
+
 .react-mic-container {
     z-index: -1;
     display: grid;
-    grid-template-columns: [s] 1fr [e] .5fr [f];
+    grid-template-columns: [s] 1fr [e] .6fr [f];
     grid-template-rows: [s] 1fr [ms] 1fr [me] .45fr [e];
     grid-row: s/e;
     grid-column: s/e;
@@ -27,19 +29,20 @@
 
     &__buttons {
         width: 1130px;
-        display: grid;
-        //transform: translateY(-2px);
-        grid-column: s/e;
-        //padding: 5px;
 
-        grid-template-columns: [s] 311px [ms] 311px [me] 1fr [e];
-        justify-items: stretch;
-        align-content: center;
         background-color: $teal;
-
         border-left: 5px ridge $yellow;
         border-right: 5px ridge $yellow;
         border-bottom: 3px solid $yellow;
+
+        grid-column: s/e;
+
+        display: grid;
+        grid-template-columns: [s] 311px [ms] 311px [me] 1fr [e];
+        justify-items: stretch;
+        align-content: center;
+   
+
 
         .fas {
             font-size: 45px;

@@ -53,7 +53,7 @@ class Microphone extends Component {
                 onSave={this.onSave}
                 onDownload={this.onDownload}
                 strokeColor="#a64ac9"
-                backgroundColor="#17e9e0" />
+                backgroundColor="#ffb48f" />
             {/* <div className="oscilloscope-scrim">
             {!record && <div className="scrim" />}
             </div> */}

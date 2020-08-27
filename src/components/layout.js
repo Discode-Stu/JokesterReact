@@ -20,7 +20,7 @@ class Layout extends Component {
           <Microphone />
         </div>
         <div className='layout__jokes'>
-          <GetJokes className='layout__jokes__abc__card' />
+          <GetJokes className='layout__jokes__data__card' />
         </div>
        
     
