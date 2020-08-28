@@ -8,16 +8,15 @@ import reducers from "./reducers";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCompactDisc,
-  faGrinSquintTears,
-  faLaughSquint
+  faCompactDisc
+
 } from "@fortawesome/free-solid-svg-icons";
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 import "./style/main.scss";
 
-library.add(faCompactDisc, faGrinSquintTears, faLaughSquint)
+library.add(faCompactDisc)
 
 function main() {
   ReactDOM.render(

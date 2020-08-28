@@ -32,7 +32,6 @@ class GetJokes extends Component {
         const dataList = data.length ? (
             data.map((joke) => {
                 return (
-                    //TODO joke.id
                     <div key={joke.id} className='cards'>
                         <div className='cards__front'>
                             <div className='cards__front__title'>
@@ -63,10 +62,7 @@ class GetJokes extends Component {
             <div className='layout__jokes__data'>
                  {dataList}
             </div>
-           
         )
-         
-        
     }
 }
 

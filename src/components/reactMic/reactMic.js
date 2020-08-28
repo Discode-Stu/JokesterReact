@@ -5,7 +5,6 @@ import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 
 import SiteDescription from '../siteDescription/siteDescription';
 
-
 class Microphone extends Component {
     constructor(props) {
         super(props);
@@ -43,7 +42,6 @@ class Microphone extends Component {
         record
     } = this.state
     return (
-       
         <div className="react-mic-container">
             <ReactMic
                 className="react-mic-container__sound-wave"
@@ -54,9 +52,7 @@ class Microphone extends Component {
                 onDownload={this.onDownload}
                 strokeColor="#a64ac9"
                 backgroundColor="#ffb48f" />
-            {/* <div className="oscilloscope-scrim">
-            {!record && <div className="scrim" />}
-            </div> */}
+
             <div className="react-mic-container__buttons">
                 
                 <button className="react-mic-container__buttons__start"   onClick={this.startRecording} type="button" title="Click to Start Recording">
@@ -72,9 +68,9 @@ class Microphone extends Component {
                 href={downloadLinkURL}
                 download="recording.webm"
                 >
-                    <button className="react-mic-container__buttons__download__icon" title="Click to Download Recording">
+                    <button className="react-mic-container__buttons__download__button" title="Click to Download Recording">
                       <CloudDownloadIcon 
-                      className="icon" 
+                      className="react-mic-container__buttons__download__button__cloud" 
                       style={{ fontSize: 50 }}
                       />
                     </button>
@@ -87,7 +83,6 @@ class Microphone extends Component {
                     controlsList="nodownload"
                     title= "Click the Play Button to Listen To Your Joke!"
                 >
-                    {/* <track kind="captions" /> */}
                 </audio>
                 <SiteDescription />
             </div>

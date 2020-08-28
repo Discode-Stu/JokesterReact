@@ -1,9 +1,7 @@
-@import 'variables';
-
-
 .layout__jokes {
     display: grid;
     justify-items: center;
+
     background-color: $teal;
 
     .layout__jokes__data {
@@ -46,8 +44,10 @@
 
                 &__jester {
                     height: 125px;
+
                     grid-row:  m/e;
                     justify-self: center;
+
                 }
                 &__jokester {
                     font-family: 'Rock Salt', cursive;
@@ -60,6 +60,7 @@
                 background-color: $peach;
 
                 display: grid;
+                align-items: center;
 
                 font-family: 'Raleway', sans-serif;
 
@@ -69,60 +70,15 @@
                 
                 border: 7px inset $yellow;
                 box-shadow: 0 2px 20px 0 rgba(0,0,0,0.1);
-                align-items: center;
-
+                
                 &__content__jester {
                     height: 125px;
                     grid-row:  m/e;
                     justify-self: center;
                 }
             }
-
         }
     }
 }
 
 
-// .jokes {
-//     display: grid;
-//     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-//     grid-template-rows: s/e;
-    
-
-// }
-
-.cards {
-    display: grid;
-    grid-template-rows: 1/-1;
-    grid-template-columns: 1/-1;
-
-    & > * {
-        grid-row: 1/-1;
-        grid-column: 1/-1;
-
-    }
-}
-
-.cards {
-        perspective: 150rem;
-        -moz-perspective: 150rem;
-
-        &__front, 
-        &__back {
-            backface-visibility: hidden;
-            transition: all .3s ease;
-        }
-        &__back {
-            transform: rotateY(-180deg);
-        }
-
-        &:hover &__front {
-            transform: rotateY(180deg);
-        }
-    
-
-        &:hover &__back {
-            transform: rotateY(0deg);
-        }
-    
-}

@@ -1,26 +1,17 @@
 .loading {
     display: flex;
-    // grid-template-rows: [s] 1fr [m] 1fr [e];
-    // grid-template-columns: [m1] 1fr [m2];
-    // height: 200px;
 
     .loading__message {
         font-size: 30px;
         color: $purple;
-        // grid-row: s/m;
-        // grid-column: m1/m2;
+
         padding-right: 15px;
 
         font-family: 'Rock Salt', cursive;
-
     }
 
     .loading__disc {
-        // display: grid;
         padding: 10px;
         font-size: 45px;
-        // grid-row: m/e;
-        // grid-column: m1/m2;
-        // align-self: center;
     }
 }
