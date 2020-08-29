@@ -6,7 +6,7 @@ Jester Image found at https://dungeondefenders.fandom.com/wiki/Jester
 
 2. other standalone libraries(no npm support)
 https://fontawesome.com/?from=io
-https://material-ui.com/
+
 
 
 Site description:

@@ -15,6 +15,13 @@
         padding: 50px;
         grid-gap: 20px;
 
+        @media screen and (max-width: 700px) {
+            width: 90vw;
+
+            grid-template-columns: repeat(auto-fill, minmax(260px, 265px));
+
+        }
+
         .cards{
             display: grid;
             grid-template-rows: [s] 1fr  [m] 1fr [e];
@@ -22,19 +29,17 @@
             &__front {
                 font-size: 16px;
 
+                height: 260px;
+                width: 240px;
+                padding: 5px;
+                border: 7px outset $yellow;
+
                 color: $purple;
                 background-color: $peach;
 
                 display: grid;
                 font-family: 'Raleway', sans-serif;
                 text-align: center;
-
-                height: 260px;
-                width: 240px;
-                padding: 5px;
-                
-                border: 7px outset $yellow;
-                box-shadow: 0 2px 20px 0 rgba(0,0,0,0.1);
                 align-items: center;
                 justify-items: center;
 
@@ -47,8 +52,8 @@
 
                     grid-row:  m/e;
                     justify-self: center;
-
                 }
+
                 &__jokester {
                     font-family: 'Rock Salt', cursive;
                 }
@@ -67,9 +72,8 @@
                 height: 260px;
                 width: 240px;
                 padding: 5px;
-                
+
                 border: 7px inset $yellow;
-                box-shadow: 0 2px 20px 0 rgba(0,0,0,0.1);
                 
                 &__content__jester {
                     height: 125px;

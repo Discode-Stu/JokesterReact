@@ -1,21 +1,32 @@
 .header {
     display: flex;
-    //grid-template-columns: [s] 1fr [m] 1fr [e] 1fr [f];
+    justify-content: center;
+    align-items: flex-end;
 
-    height: 147px;
+    width: 100%;
     background-color: $peach;
     border-bottom: 5px groove $peach;
-
-    justify-content: center;
+    
+    @media screen and (max-width: 700px) {
+        justify-content: flex-start;
+    }
 
     &__image-jester {
-        height: 150px;
+        height: 160px;
+
+        @media screen and (max-width: 700px) {
+            height: 130px;
+        }
     }
+
     &__title {
         &__jokester {
             font-size: 60px;
             font-family: 'Rock Salt', cursive;
-            transform: translateX(7px);   
+ 
+            @media screen and (max-width: 700px) {
+                font-size: 40px;
+            }
         }
 
         &__desription {
@@ -29,6 +40,5 @@
 
 .navbar {
     background-color: $purple;
-
     border-bottom: 5px groove $purple;
 }

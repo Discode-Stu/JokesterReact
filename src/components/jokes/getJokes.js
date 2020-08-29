@@ -16,7 +16,6 @@ class GetJokes extends Component {
         axios
         .get("https://dts-jokester-api.herokuapp.com/jokes")
         .then(response => {
-          //console.log("response data", response);
           this.setState({
               data: response.data
           })
@@ -27,7 +26,6 @@ class GetJokes extends Component {
       }
 
     render() {
-        
         const { data } = this.state
         const dataList = data.length ? (
             data.map((joke) => {
